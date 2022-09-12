@@ -84,6 +84,14 @@ public class Employee {
 				+ salary + "]";
 	}
 	
+	public void init() {
+		System.out.println("Initialization code ...");
+	}
+	
+	public void cleanup() {
+		System.out.println("Clean up code...");
+	}
+	
 	
 	
 	
