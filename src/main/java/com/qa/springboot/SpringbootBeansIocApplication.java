@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import com.qa.springboot.bean.Address;
 import com.qa.springboot.bean.Employee;
 
 @SpringBootApplication
@@ -28,16 +29,30 @@ public class SpringbootBeansIocApplication {
 			 * System.out.println(emp2);
 			 */
 		  
-		  Employee emp1 = context.getBean("emp1",Employee.class);
-		  System.out.println(emp1);
-		  
-		  Employee emp111 = context.getBean("emp1",Employee.class);
-		  System.out.println(emp111);
-		  
-		  System.out.println(emp1 == emp111);
-		  
-		 ((ConfigurableApplicationContext) context).close();
-		  
+			/*
+			 * Employee emp1 = context.getBean("emp1",Employee.class);
+			 * System.out.println(emp1);
+			 * 
+			 * Employee emp111 = context.getBean("emp1",Employee.class);
+			 * System.out.println(emp111);
+			 * 
+			 * System.out.println(emp1 == emp111);
+			 * 
+			 * ((ConfigurableApplicationContext) context).close();
+			 */
+		
+			/*
+			 * Employee employee = context.getBean("emp1",Employee.class);
+			 * System.out.println(employee);
+			 */
+		
+		//Address homeaddress = context.getBean("homeaddress",Address.class);
+		/*
+		 * Address homeaddress = context.getBean(Address.class);
+		 * System.out.println(homeaddress);
+		 */
+		Employee employee = context.getBean(Employee.class);
+		System.out.println(employee);
 		 
 
 	}
